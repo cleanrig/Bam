@@ -1,5 +1,5 @@
-choice = input("Do you want to print as an index?")
-userin = input("What text do you want to print?")
+choice = input("Do you want to print as an index?\n")
+userin = input("What text do you want to print?\n")
 CP850list = []
 for letter in userin:
     if letter == "a":
@@ -54,8 +54,14 @@ for letter in userin:
         CP850list.append('121')
     if letter == "z":
         CP850list.append('122')
-if choice.lower == "yes":
+if choice == "Yes":
     print(CP850list)
 else:
+    test = 0
     for integer in CP850list:
-        print(integer, end=' ')
+        test += 1
+        if len(CP850list) == test:
+            print(integer)
+        else:
+            print(integer, end=' ')
+        
